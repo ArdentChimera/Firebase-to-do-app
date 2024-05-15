@@ -1,14 +1,15 @@
-import { useContext, useState } from "react"
+import { useState } from "react"
 import "./homePage.scss"
 import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 import { db } from "../../firebase"
 import { useNavigate } from "react-router-dom"
-import { UserNameContext } from "../../utils/UserNameContext"
+import { useDispatch } from "react-redux"
+import { setUserName } from "../../utils/store"
 
 const HomePage = () => {
 	const [input, setInput] = useState("")
 	const navigate = useNavigate()
-	const { setUserName } = useContext(UserNameContext)
+	const dispatch = useDispatch()
 
 	const createFirestoreCollection = async name => {
 		if (name !== "") {
@@ -17,7 +18,7 @@ const HomePage = () => {
 					todo: "Your first to-do...",
 					timestamp: serverTimestamp(),
 				})
-				setUserName(name)
+				dispatch(setUserName(name))
 				navigate("/to-do-list")
 			} catch (error) {
 				console.error("Error adding document: ", error)
