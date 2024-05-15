@@ -1,0 +1,96 @@
+.strikethrough {
+	text-decoration: line-through;
+}
+
+.dark-list {
+	width: 100%;
+	margin: 0 auto;
+	z-index: 999;
+	display: flex;
+	flex-direction: column;
+	background-color: hsl(235, 24%, 19%);
+	border-top-left-radius: 10px;
+	height: 400px;
+	overflow: scroll;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scrollbar-color: hsl(231, 8%, 65%) hsl(235, 24%, 19%);
+	scrollbar-width: thin;
+
+	h2 {
+		text-align: center;
+		color: white;
+	}
+}
+
+.light-list {
+	width: 100%;
+	margin: 0 auto;
+	z-index: 999;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border-top-left-radius: 10px;
+	border: 1px solid hsl(231, 8%, 65%);
+	height: 400px;
+	overflow: scroll;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scrollbar-color: hsl(231, 8%, 65%) white;
+	scrollbar-width: thin;
+
+	h2 {
+		text-align: center;
+		color: black;
+	}
+}
+
+.output-dark {
+	width: 100%;
+	height: 70px;
+	background-color: hsl(235, 24%, 19%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-top: 1px solid hsl(236, 10%, 27%);
+
+	.checkbox {
+		color: hsl(234, 39%, 85%);
+	}
+
+	.todo-text {
+		width: 70%;
+		color: hsl(234, 39%, 85%);
+		background-color: transparent;
+		border: none;
+		font-size: large;
+		letter-spacing: 2px;
+		font-family: "Josefin Sans", "sans";
+	}
+}
+
+.output-light {
+	width: 100%;
+	height: 70px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-top: 1px solid hsl(231, 8%, 65%);
+
+	.checkbox {
+		color: black;
+	}
+
+	.todo-text {
+		width: 70%;
+		color: black;
+		background-color: transparent;
+		border: none;
+		font-size: large;
+		letter-spacing: 2px;
+		font-family: "Josefin Sans", "sans";
+	}
+}

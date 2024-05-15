@@ -1,0 +1,175 @@
+.dark-input {
+	width: 45%;
+	height: 70px;
+	background-color: hsl(235, 24%, 19%);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding-left: 20px;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+	form {
+		width: 100%;
+		display: flex;
+		gap: 10px;
+		input:-webkit-autofill {
+			transition: 5000s;
+			transition-property: background-color;
+			-webkit-text-fill-color: hsl(234, 39%, 85%);
+		}
+	}
+
+	.checkbox {
+		color: hsl(234, 39%, 85%);
+	}
+
+	.text-input {
+		width: 85%;
+		color: hsl(234, 39%, 85%);
+		background-color: hsl(235, 24%, 19%);
+		border: none;
+		font-size: large;
+		letter-spacing: 2px;
+		font-family: "Josefin Sans", "sans";
+	}
+
+	.text-input:focus {
+		outline: none;
+	}
+
+	button {
+		width: 50px;
+		height: 50px;
+		background-color: transparent;
+		color: hsl(234, 39%, 85%);
+		border: none;
+		font-weight: bold;
+		font-size: medium;
+		border-radius: 10px;
+		cursor: pointer;
+	}
+
+	button:hover {
+		background-color: rgba(107, 107, 107, 0.363);
+	}
+}
+
+.light-input {
+	width: 45%;
+	height: 70px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding-left: 20px;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+	form {
+		width: 100%;
+		display: flex;
+		gap: 10px;
+		input:-webkit-autofill {
+			transition: background-color 5000s;
+			-webkit-text-fill-color: hsl(0, 0%, 0%);
+		}
+	}
+
+	.checkbox {
+		color: hsl(231, 8%, 65%);
+	}
+
+	.text-input {
+		width: 85%;
+		color: hsl(0, 0%, 0%);
+		background-color: transparent;
+		border: none;
+		font-size: large;
+		letter-spacing: 2px;
+		font-family: "Josefin Sans", "sans";
+	}
+
+	.text-input:focus {
+		outline: none;
+		background-color: transparent;
+	}
+
+	button {
+		width: 50px;
+		height: 50px;
+		background-color: transparent;
+		color: hsl(231, 8%, 65%);
+		border: none;
+		font-weight: bold;
+		font-size: medium;
+		border-radius: 10px;
+		cursor: pointer;
+	}
+
+	button:hover {
+		background-color: rgba(107, 107, 107, 0.363);
+	}
+}
+
+.input-div {
+	width: 90%;
+}
+
+.output-div-dark {
+	position: absolute;
+	top: 270px;
+	right: 400px;
+	width: 50%;
+	height: 400px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 90px 50px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+	.dark-list-menu {
+		display: flex;
+		justify-content: space-around;
+		background-color: hsl(235, 24%, 19%);
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		height: 70px;
+	}
+
+	p.footer-text {
+		font-size: 12px;
+		color: hsl(231, 8%, 65%);
+		text-align: center;
+		margin-top: 20px;
+	}
+}
+
+.output-div-light {
+	position: absolute;
+	top: 270px;
+	right: 400px;
+	width: 50%;
+	height: 400px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -15px 90px, rgba(0, 0, 0, 0.12) 0px 90px 60px,
+		rgba(0, 0, 0, 0.17) 0px 90px 50px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+	.light-list-menu {
+		display: flex;
+		justify-content: space-around;
+		background-color: white;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		height: 70px;
+	}
+
+	p.footer-text {
+		font-size: 12px;
+		color: black;
+		text-align: center;
+		margin-top: 20px;
+	}
+}
