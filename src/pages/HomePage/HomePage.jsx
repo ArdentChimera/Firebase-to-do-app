@@ -15,6 +15,7 @@ const HomePage = () => {
 		if (name !== "") {
 			try {
 				await addDoc(collection(db, name), {
+					username: name,
 					todo: "Your first to-do...",
 					timestamp: serverTimestamp(),
 				})

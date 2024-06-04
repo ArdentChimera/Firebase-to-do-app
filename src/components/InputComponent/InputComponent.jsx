@@ -24,6 +24,15 @@ const InputComponent = ({ theme }) => {
 	const [checkedState, setCheckedState] = useState({})
 	const { userName } = useContext(UserNameContext)
 
+	useEffect(() => {
+		const savedTodos = localStorage.getItem(todos)
+		if (savedTodos) {
+			setTodos(JSON.parse(savedTodos))
+		} else {
+			getFirestoreData()
+		}
+	}, [userName])
+
 	const onDragEnd = result => {
 		if (!result.destination) {
 			return
@@ -37,30 +46,41 @@ const InputComponent = ({ theme }) => {
 	}
 
 	useEffect(() => {
+		if (!userName) return
+
 		const unsubscribe = onSnapshot(collection(db, userName), snapshot => {
-			setTodos(snapshot.docs.map(doc => ({ id: doc.id, item: doc.data() })))
+			const newTodos = snapshot.docs.map(doc => ({
+				id: doc.id,
+				item: doc.data(),
+			}))
+			setTodos(newTodos)
+
+			localStorage.setItem(userName, JSON.stringify(newTodos))
 		})
 		return () => unsubscribe()
-	}, [input])
+	}, [userName])
 
 	const getFirestoreData = async () => {
+		if (!userName) return
+
 		const querySnapshot = await getDocs(collection(db, userName))
 		const newData = querySnapshot.docs.map(doc => ({
 			...doc.data(),
 			id: doc.id,
 		}))
 		setTodos(newData)
+		localStorage.setItem(userName, JSON.stringify(newData))
 	}
 
-	const addTodo = e => {
+	const addTodo = async e => {
 		e.preventDefault()
 		if (input !== "") {
-			addDoc(collection(db, userName), {
+			await addDoc(collection(db, userName), {
 				todo: input,
 				timestamp: serverTimestamp(),
 			})
 			setInput("")
-			getFirestoreData()
+			await getFirestoreData()
 		} else {
 			setInput("")
 			throw new Error("Input is empty!")

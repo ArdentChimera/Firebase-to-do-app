@@ -70,7 +70,9 @@ const ListComponent = ({
 													: "todo-text"
 											}
 										>
-											{element.item.todo}
+											{element.item && element.item.todo
+												? element.item.todo
+												: "No todo text"}
 										</span>
 										<IconButton
 											onClick={() => {
