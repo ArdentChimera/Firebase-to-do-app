@@ -69,3 +69,75 @@ body {
 		width: 30px;
 	}
 }
+
+/* Media Queries for Responsiveness */
+
+/* Large screens */
+@media (min-width: 1200px) {
+	.header {
+		width: 50%;
+	}
+
+	.header h1 {
+		font-size: 50px;
+		letter-spacing: 12px;
+	}
+
+	.header button {
+		width: 55px;
+		height: 55px;
+	}
+
+	.header .theme-icon {
+		width: 30px;
+	}
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+	.header-container-dark,
+	.header-container-light {
+		height: 250px;
+		background-image: url("../../assets/images/bg-mobile-dark.jpg");
+	}
+
+	.header-container-light {
+		background-image: url("../../assets/images/bg-mobile-light.jpg");
+	}
+
+	.header h1 {
+		font-size: 35px;
+		letter-spacing: 8px;
+	}
+
+	.header button {
+		width: 45px;
+		height: 45px;
+	}
+
+	.header .theme-icon {
+		width: 22px;
+	}
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+	.header-container-dark,
+	.header-container-light {
+		height: 200px;
+	}
+
+	.header h1 {
+		font-size: 30px;
+		letter-spacing: 6px;
+	}
+
+	.header button {
+		width: 40px;
+		height: 40px;
+	}
+
+	.header .theme-icon {
+		width: 20px;
+	}
+}

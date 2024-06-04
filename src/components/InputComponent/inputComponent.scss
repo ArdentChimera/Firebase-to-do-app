@@ -173,3 +173,94 @@
 		margin-top: 20px;
 	}
 }
+
+/* Media Queries for Responsiveness */
+
+//Large screen
+@media (max-width: 1300px) {
+	.output-div-dark,
+	.output-div-light {
+		width: 70%;
+		top: 270px;
+		left: 160px;
+	}
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+	.dark-input,
+	.light-input {
+		height: 60px;
+		padding-left: 15px;
+	}
+
+	.dark-input .text-input,
+	.light-input .text-input {
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+
+	.dark-input button,
+	.light-input button {
+		width: 45px;
+		height: 45px;
+		font-size: small;
+	}
+
+	.output-div-dark,
+	.output-div-light {
+		width: 70%;
+		top: 230px;
+		left: 120px;
+	}
+
+	.dark-list-menu,
+	.light-list-menu {
+		height: 60px;
+	}
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+	.dark-input,
+	.light-input {
+		width: 80%;
+		height: 50px;
+		padding-left: 10px;
+		gap: 5px;
+	}
+
+	.dark-input .text-input,
+	.light-input .text-input {
+		font-size: 14px;
+		letter-spacing: 0;
+	}
+
+	.dark-input button,
+	.light-input button {
+		width: 40px;
+		height: 40px;
+		font-size: x-small;
+		border-radius: 5px;
+		margin-top: 5px;
+	}
+
+	.output-div-dark,
+	.output-div-light {
+		width: 90%;
+		top: 180px;
+		left: 20px;
+		font-size: 15px;
+	}
+
+	.dark-list-menu,
+	.light-list-menu {
+		height: 50px;
+	}
+
+	.output-div-dark p.footer-text,
+	.output-div-light p.footer-text {
+		font-size: 10px;
+		margin-top: 15px;
+	}
+}

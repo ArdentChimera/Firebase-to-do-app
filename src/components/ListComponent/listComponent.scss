@@ -94,3 +94,23 @@
 		font-family: "Josefin Sans", "sans";
 	}
 }
+
+/* Media Queries for Responsiveness */
+
+//Small screens
+@media (max-width: 480px) {
+	.dark-list,
+	.light-list {
+		h2 {
+			font-size: medium;
+			margin-top: 20px;
+		}
+	}
+
+	.output-light,
+	.output-dark {
+		.todo-text {
+			font-size: 15px;
+		}
+	}
+}
